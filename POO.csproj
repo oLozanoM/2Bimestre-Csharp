@@ -63,7 +63,6 @@
     <Content Include="IMG\itsukibrr.jpg" />
     <Content Include="IMG\mikubrr.jpg" />
     <Content Include="IMG\ninobrr.jpg" />
-    <Content Include="IMG\uno.jpg" />
     <Content Include="IMG\yotsubabrr.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
