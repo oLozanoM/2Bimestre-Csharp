@@ -89,9 +89,9 @@ namespace POO
             txtNome.Text = " Nome : " + Obj01Nino.Nome;
             txtIdade.Text = " Idade : " + Obj01Nino.Idade;
             txtFav.Text = " Coisa Favorita : " + Obj01Nino.Fav;
-            this.txtNome.Location = new Point(100, 150);
-            this.txtIdade.Location = new Point(100, 190);
-            this.txtFav.Location = new Point(100, 230);
+            this.txtNome.Location = new Point(200, 150);
+            this.txtIdade.Location = new Point(200, 190);
+            this.txtFav.Location = new Point(200, 230);
             txtNome.Size = new Size(300, 30);
             txtIdade.Size = new Size(300, 30);
             txtFav.Size = new Size(300, 30);
@@ -99,7 +99,7 @@ namespace POO
             img.SizeMode = PictureBoxSizeMode.StretchImage;
             img.Width = 200;
             img.Height = 300;
-            this.img.Location = new Point(100, 250);
+            this.img.Location = new Point(180, 250);
         }
         private void Miku(object sender, EventArgs e)
         {
@@ -110,9 +110,9 @@ namespace POO
             txtNome.Text = " Nome : " + Obj01Miku.Nome;
             txtIdade.Text = " Idade : " + Obj01Miku.Idade;
             txtFav.Text = " Coisa Favorita : " + Obj01Miku.Fav;
-            this.txtNome.Location = new Point(100, 150);
-            this.txtIdade.Location = new Point(100, 190);
-            this.txtFav.Location = new Point(100, 230);
+            this.txtNome.Location = new Point(200, 150);
+            this.txtIdade.Location = new Point(200, 190);
+            this.txtFav.Location = new Point(200, 230);
             txtNome.Size = new Size(300, 30);
             txtIdade.Size = new Size(300, 30);
             txtFav.Size = new Size(300, 30);
@@ -120,7 +120,7 @@ namespace POO
             img.SizeMode = PictureBoxSizeMode.StretchImage;
             img.Width = 200;
             img.Height = 300;
-            this.img.Location = new Point(100, 250);
+            this.img.Location = new Point(180, 250);
         }
         private void Yotsuba(object sender, EventArgs e)
         {
@@ -132,9 +132,9 @@ namespace POO
             txtNome.Text = " Nome : " + Obj01Yotsuba.Nome;
             txtIdade.Text = " Idade : " + Obj01Yotsuba.Idade;
             txtFav.Text = " Coisa Favorita : " + Obj01Yotsuba.Fav;
-            this.txtNome.Location = new Point(100, 150);
-            this.txtIdade.Location = new Point(100, 190);
-            this.txtFav.Location = new Point(100, 230);
+            this.txtNome.Location = new Point(200, 150);
+            this.txtIdade.Location = new Point(200, 190);
+            this.txtFav.Location = new Point(200, 230);
             txtNome.Size = new Size(300, 30);
             txtIdade.Size = new Size(300, 30);
             txtFav.Size = new Size(300, 30);
@@ -142,7 +142,7 @@ namespace POO
             img.SizeMode = PictureBoxSizeMode.StretchImage;
             img.Width = 200;
             img.Height = 300;
-            this.img.Location = new Point(100, 250);
+            this.img.Location = new Point(180, 250);
 
         }
         private void Itsuki(object sender, EventArgs e)
@@ -155,9 +155,9 @@ namespace POO
             txtNome.Text = " Nome : " + Obj01Itsuki.Nome;
             txtIdade.Text = " Idade : " + Obj01Itsuki.Idade;
             txtFav.Text = " Coisa Favorita : " + Obj01Itsuki.Fav;
-            this.txtNome.Location = new Point(100, 150);
-            this.txtIdade.Location = new Point(100, 190);
-            this.txtFav.Location = new Point(100, 230);
+            this.txtNome.Location = new Point(200, 150);
+            this.txtIdade.Location = new Point(200, 190);
+            this.txtFav.Location = new Point(200, 230);
             txtNome.Size = new Size(300, 30);
             txtIdade.Size = new Size(300, 30);
             txtFav.Size = new Size(300, 30);
@@ -165,7 +165,7 @@ namespace POO
             img.SizeMode = PictureBoxSizeMode.StretchImage;
             img.Width = 200;
             img.Height = 300;
-            this.img.Location = new Point(100, 250);
+            this.img.Location = new Point(180, 250);
 
         }
         private void Ichika(object sender, EventArgs e)
@@ -177,9 +177,9 @@ namespace POO
             txtNome.Text = " Nome : " + Obj01Ichika.Nome;
             txtIdade.Text = " Idade : " + Obj01Ichika.Idade;
             txtFav.Text = " Coisa Favorita : " + Obj01Ichika.Fav;
-            this.txtNome.Location = new Point(100, 150);
-            this.txtIdade.Location = new Point(100, 190);
-            this.txtFav.Location = new Point(100, 230);
+            this.txtNome.Location = new Point(200, 150);
+            this.txtIdade.Location = new Point(200, 190);
+            this.txtFav.Location = new Point(200, 230);
             txtNome.Size = new Size(300, 30);
             txtIdade.Size = new Size(300, 30);
             txtFav.Size = new Size(300, 30);
@@ -187,7 +187,7 @@ namespace POO
             img.SizeMode = PictureBoxSizeMode.StretchImage;
             img.Width = 200;
             img.Height = 300;
-            this.img.Location = new Point(100, 250);
+            this.img.Location = new Point(180, 250);
         }
     }
 }
