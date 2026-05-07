@@ -34,7 +34,5 @@ namespace POO
         }
     }
 
-    internal class Quimtuplas
-    {
-    }
+    
 }
