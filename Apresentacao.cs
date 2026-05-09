@@ -24,6 +24,7 @@ namespace POO
         Label txtFav = new Label();
         Label txtIdade = new Label();
         Label txtNome = new Label();
+        Label Titulo = new Label();
 
         Button btobj01 = new Button();
         Button btobj02 = new Button();
@@ -31,54 +32,67 @@ namespace POO
         Button btobj04 = new Button();
         Button btobj05 = new Button();
 
-
-
-
-        // toda classe tem um construtor
+        //Painel
+        Panel painel = new Panel();
+        
         public Apresentacao()
         {
-            this.Text = "Titulo ";
-            this.Size = new Size(600, 600);
-            btobj01.Text = " 1 OPÇAO ";
-            btobj01.Location = new Point(50, 50);
+            this.Text = "atividade 2bim ";
+            this.Size = new Size(900, 600);
+
+            painel.BackColor = Color.SkyBlue;
+            painel.Dock = DockStyle.Left;
+            painel.Width = 300;
+
+            Titulo.Text = "Escolha a personagem de sua preferência";
+            Titulo.Size = new Size(250, 45);
+            Titulo.Font = new Font("Arial", 14);
+            Titulo.Location = new Point(50, 50);
+
+            btobj01.Text = " Ichika ";
+            btobj01.AutoSize = true;
             btobj01.Click += Ichika;
 
-            btobj02.Text = " 2 OPÇAO ";
-            btobj02.Location = new Point(150, 50);
+            btobj02.Text = " Nino ";
+            btobj02.AutoSize = true;
             btobj02.Click += Nino;
 
-            btobj03.Text = " 3 OPÇAO ";
-            btobj03.Location = new Point(250, 50);
+            btobj03.Text = " Miku ";
+            btobj03.AutoSize = true;
             btobj03.Click += Miku;
 
-            btobj04.Text = " 4 OPÇAO ";
-            btobj04.Location = new Point(350, 50);
+            btobj04.Text = " Yotsuba ";
+            btobj04.AutoSize = true;
             btobj04.Click += Yotsuba;
 
-            btobj05.Text = " 5 OPÇAO ";
-            btobj05.Location = new Point(450, 50);
+            btobj05.Text = " Itsuki ";
+            btobj05.AutoSize = true;
             btobj05.Click += Itsuki;
 
+            Titulo.Location = new Point(20, 20);
+            btobj01.Location = new Point(20, 80);
+            btobj02.Location = new Point(20, 130);
+            btobj03.Location = new Point(20, 180);
+            btobj04.Location = new Point(20, 230);
+            btobj05.Location = new Point(20, 280);
 
+            Titulo.BackColor = Color.SkyBlue;
+            btobj01.BackColor = Color.Transparent;
+            btobj02.BackColor = Color.Transparent;
+            btobj03.BackColor = Color.Transparent;
+            btobj04.BackColor = Color.Transparent;
+            btobj05.BackColor = Color.Transparent;
 
-            // Control[] controles = new Control[] { txtMarca, btobj01 }; 
-            //this.Controls.Add(btobj01);
-            this.Controls.AddRange(new Control[] {btobj01, img, btobj02, btobj03, btobj04, btobj05, txtFav,txtIdade, txtNome });
+            painel.Controls.Add(Titulo);
+            painel.Controls.Add(btobj01);
+            painel.Controls.Add(btobj02);
+            painel.Controls.Add(btobj03);
+            painel.Controls.Add(btobj04);
+            painel.Controls.Add(btobj05);
+
+            this.Controls.AddRange(new Control[] {painel, img, txtFav, txtIdade, txtNome});
 
         }
-
-            //MessageBox.Show("Metodo de Evento");
-            // fazer apresentação da carro01
-            //carr01.SetMarca("Fiat");
-            // this.txtMarca.Text = " Marca : " + carr01.GetMarca();
-            // COLOCAR IMAGEM
-            //img.Image = Image.FromFile(@"C:\Users\LabInfo\source\repos\'Emerson - Rocha'\POO_\IMG\uno.jpg");
-            //img.SizeMode = PictureBoxSizeMode.AutoSize;
-            //img.Width = 200;
-            //img.Height = 150;
-            // this.img.Location = new Point(100, 200);
-
-
 
         private void Nino(object sender, EventArgs e)
         {
@@ -92,9 +106,9 @@ namespace POO
             txtIdade.Text = " Idade : " + Obj01Nino.Idade;
             txtFav.Text = " Coisa Favorita : " + Obj01Nino.Fav;
 
-            this.txtNome.Location = new Point(200, 150);
-            this.txtIdade.Location = new Point(200, 190);
-            this.txtFav.Location = new Point(200, 230);
+            this.txtNome.Location = new Point(500, 50);
+            this.txtIdade.Location = new Point(500, 90);
+            this.txtFav.Location = new Point(500, 130);
             txtNome.Size = new Size(300, 30);
             txtIdade.Size = new Size(300, 30);
             txtFav.Size = new Size(300, 30);
@@ -113,7 +127,7 @@ namespace POO
             img.SizeMode = PictureBoxSizeMode.StretchImage;
             img.Width = 200;
             img.Height = 300;
-            this.img.Location = new Point(180, 250);
+            this.img.Location = new Point(480, 180);
         }
         private void Miku(object sender, EventArgs e)
         {
@@ -127,9 +141,9 @@ namespace POO
             txtIdade.Text = " Idade : " + Obj01Miku.Idade;
             txtFav.Text = " Coisa Favorita : " + Obj01Miku.Fav;
 
-            this.txtNome.Location = new Point(200, 150);
-            this.txtIdade.Location = new Point(200, 190);
-            this.txtFav.Location = new Point(200, 230);
+            this.txtNome.Location = new Point(500, 50);
+            this.txtIdade.Location = new Point(500, 90);
+            this.txtFav.Location = new Point(500, 130);
             txtNome.Size = new Size(300, 30);
             txtIdade.Size = new Size(300, 30);
             txtFav.Size = new Size(300, 30);
@@ -148,7 +162,7 @@ namespace POO
             img.SizeMode = PictureBoxSizeMode.StretchImage;
             img.Width = 200;
             img.Height = 300;
-            this.img.Location = new Point(180, 250);
+            this.img.Location = new Point(480, 180);
         }
         private void Yotsuba(object sender, EventArgs e)
         {
@@ -162,9 +176,9 @@ namespace POO
             txtIdade.Text = " Idade : " + Obj01Yotsuba.Idade;
             txtFav.Text = " Coisa Favorita : " + Obj01Yotsuba.Fav;
 
-            this.txtNome.Location = new Point(200, 150);
-            this.txtIdade.Location = new Point(200, 190);
-            this.txtFav.Location = new Point(200, 230);
+            this.txtNome.Location = new Point(500, 50);
+            this.txtIdade.Location = new Point(500, 90);
+            this.txtFav.Location = new Point(500, 130);
             txtNome.Size = new Size(300, 30);
             txtIdade.Size = new Size(300, 30);
             txtFav.Size = new Size(300, 30);
@@ -183,7 +197,7 @@ namespace POO
             img.SizeMode = PictureBoxSizeMode.StretchImage;
             img.Width = 200;
             img.Height = 300;
-            this.img.Location = new Point(180, 250);
+            this.img.Location = new Point(480, 180);
         }
         private void Itsuki(object sender, EventArgs e)
         {
@@ -197,9 +211,9 @@ namespace POO
             txtIdade.Text = " Idade : " + Obj01Itsuki.Idade;
             txtFav.Text = " Coisa Favorita : " + Obj01Itsuki.Fav;
 
-            this.txtNome.Location = new Point(200, 150);
-            this.txtIdade.Location = new Point(200, 190);
-            this.txtFav.Location = new Point(200, 230);
+            this.txtNome.Location = new Point(500, 50);
+            this.txtIdade.Location = new Point(500, 90);
+            this.txtFav.Location = new Point(500, 130);
             txtNome.Size = new Size(300, 30);
             txtIdade.Size = new Size(300, 30);
             txtFav.Size = new Size(300, 30);
@@ -218,7 +232,7 @@ namespace POO
             img.SizeMode = PictureBoxSizeMode.StretchImage;
             img.Width = 200;
             img.Height = 300;
-            this.img.Location = new Point(180, 250);
+            this.img.Location = new Point(480, 180);
         }
         private void Ichika(object sender, EventArgs e)
         {
@@ -232,9 +246,9 @@ namespace POO
             txtIdade.Text = " Idade : " + Obj01Ichika.Idade;
             txtFav.Text = " Coisa Favorita : " + Obj01Ichika.Fav;
 
-            this.txtNome.Location = new Point(200, 150);
-            this.txtIdade.Location = new Point(200, 190);
-            this.txtFav.Location = new Point(200, 230);
+            this.txtNome.Location = new Point(500, 50);
+            this.txtIdade.Location = new Point(500, 90);
+            this.txtFav.Location = new Point(500, 130);
             txtNome.Size = new Size(300, 30);
             txtIdade.Size = new Size(300, 30);
             txtFav.Size = new Size(300, 30);
@@ -253,7 +267,7 @@ namespace POO
             img.SizeMode = PictureBoxSizeMode.StretchImage;
             img.Width = 200;
             img.Height = 300;
-            this.img.Location = new Point(180, 250);
+            this.img.Location = new Point(480, 180);
         }
     }
 }
