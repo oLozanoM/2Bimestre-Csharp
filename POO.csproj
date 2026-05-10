@@ -51,9 +51,14 @@
     <Compile Include="Apresentacao.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Personagem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Quintuplas.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -64,6 +69,18 @@
     <Content Include="IMG\mikubrr.jpg" />
     <Content Include="IMG\ninobrr.jpg" />
     <Content Include="IMG\yotsubabrr.jpg" />
+    <None Include="Resources\yotsubabrr.jpg" />
+    <None Include="Resources\ninobrr.jpg" />
+    <None Include="Resources\mikubrr.jpg" />
+    <None Include="Resources\itsukibrr.jpg" />
+    <None Include="Resources\ichikabrr.jpg" />
+    <None Include="Resources\ichika.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

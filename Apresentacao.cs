@@ -13,11 +13,7 @@ namespace POO
     class Apresentacao : Form
     {
         // criar um objeto do automovel
-        Quintuplas Obj01Nino = new Quintuplas();
-        Quintuplas Obj01Miku = new Quintuplas();
-        Quintuplas Obj01Yotsuba = new Quintuplas();
-        Quintuplas Obj01Itsuki = new Quintuplas();
-        Quintuplas Obj01Ichika = new Quintuplas();
+        
 
         // Objeto
         PictureBox img = new PictureBox();
@@ -94,26 +90,22 @@ namespace POO
 
         }
 
-        private void Nino(object sender, EventArgs e)
+        private void MostrarPersonagem(Personagem p)
         {
-            Quintuplas Obj01Nino = new Quintuplas("Nino", "26 anos");
+            txtNome.Text = "Nome: " + p.Nome;
+            txtIdade.Text = "Idade: " + p.Idade;
+            txtFav.Text = "Favorito: " + p.Fav;
 
-            Obj01Nino.Nome = "Nino Nakano";
-            Obj01Nino.Idade = 26;
-            Obj01Nino.Fav = "Cozinhar";
+            txtNome.Location = new Point(500, 50);
+            txtIdade.Location = new Point(500, 90);
+            txtFav.Location = new Point(500, 130);
 
-            txtNome.Text = " Nome : " + Obj01Nino.Nome;
-            txtIdade.Text = " Idade : " + Obj01Nino.Idade;
-            txtFav.Text = " Coisa Favorita : " + Obj01Nino.Fav;
-
-            this.txtNome.Location = new Point(500, 50);
-            this.txtIdade.Location = new Point(500, 90);
-            this.txtFav.Location = new Point(500, 130);
             txtNome.Size = new Size(300, 30);
             txtIdade.Size = new Size(300, 30);
             txtFav.Size = new Size(300, 30);
 
-            string imgPath = Path.Combine(Application.StartupPath, @"..\..\IMG\ninobrr.jpg");
+            string imgPath = Path.Combine(Application.StartupPath, p.Imagem());
+
             if (File.Exists(imgPath))
             {
                 img.Image = Image.FromFile(imgPath);
@@ -121,153 +113,39 @@ namespace POO
             else
             {
                 img.Image = null;
-                MessageBox.Show($"Arquivo de imagem não encontrado:\n{imgPath}", "Arquivo não encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Imagem não encontrada!");
             }
 
             img.SizeMode = PictureBoxSizeMode.StretchImage;
             img.Width = 200;
             img.Height = 300;
-            this.img.Location = new Point(480, 180);
+            img.Location = new Point(480, 180);
         }
-        private void Miku(object sender, EventArgs e)
+
+        private void Ichika (object sender, EventArgs e)
         {
-            Quintuplas Obj01Miku = new Quintuplas("Miku", "26 anos");
-
-            Obj01Miku.Nome = "Miku Nakano";
-            Obj01Miku.Idade = 26;
-            Obj01Miku.Fav = "Ouvir Música";
-
-            txtNome.Text = " Nome : " + Obj01Miku.Nome;
-            txtIdade.Text = " Idade : " + Obj01Miku.Idade;
-            txtFav.Text = " Coisa Favorita : " + Obj01Miku.Fav;
-
-            this.txtNome.Location = new Point(500, 50);
-            this.txtIdade.Location = new Point(500, 90);
-            this.txtFav.Location = new Point(500, 130);
-            txtNome.Size = new Size(300, 30);
-            txtIdade.Size = new Size(300, 30);
-            txtFav.Size = new Size(300, 30);
-
-            string imgPath = Path.Combine(Application.StartupPath, @"..\..\IMG\mikubrr.jpg");
-            if (File.Exists(imgPath))
-            {
-                img.Image = Image.FromFile(imgPath);
-            }
-            else
-            {
-                img.Image = null;
-                MessageBox.Show($"Arquivo de imagem não encontrado:\n{imgPath}", "Arquivo não encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-            img.SizeMode = PictureBoxSizeMode.StretchImage;
-            img.Width = 200;
-            img.Height = 300;
-            this.img.Location = new Point(480, 180);
+            MostrarPersonagem(new Ichika());
         }
-        private void Yotsuba(object sender, EventArgs e)
+
+        private void Nino (object sender, EventArgs e)
         {
-            Quintuplas Obj01Yotsuba = new Quintuplas("Yotsuba", "26 anos");
-
-            Obj01Yotsuba.Nome = "Yotsuba Nakano";
-            Obj01Yotsuba.Idade = 26;
-            Obj01Yotsuba.Fav = "Praticar Esportes";
-
-            txtNome.Text = " Nome : " + Obj01Yotsuba.Nome;
-            txtIdade.Text = " Idade : " + Obj01Yotsuba.Idade;
-            txtFav.Text = " Coisa Favorita : " + Obj01Yotsuba.Fav;
-
-            this.txtNome.Location = new Point(500, 50);
-            this.txtIdade.Location = new Point(500, 90);
-            this.txtFav.Location = new Point(500, 130);
-            txtNome.Size = new Size(300, 30);
-            txtIdade.Size = new Size(300, 30);
-            txtFav.Size = new Size(300, 30);
-
-            string imgPath = Path.Combine(Application.StartupPath, @"..\..\IMG\yotsubabrr.jpg");
-            if (File.Exists(imgPath))
-            {
-                img.Image = Image.FromFile(imgPath);
-            }
-            else
-            {
-                img.Image = null;
-                MessageBox.Show($"Arquivo de imagem não encontrado:\n{imgPath}", "Arquivo não encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-            img.SizeMode = PictureBoxSizeMode.StretchImage;
-            img.Width = 200;
-            img.Height = 300;
-            this.img.Location = new Point(480, 180);
+            MostrarPersonagem(new Nino());
         }
+
+        private void Miku (object sender, EventArgs e)
+        {
+            MostrarPersonagem(new Miku());
+        }
+
+        private void Yotsuba (object sender, EventArgs e)
+        {
+            MostrarPersonagem(new Yotsuba());
+        }
+
         private void Itsuki(object sender, EventArgs e)
         {
-            Quintuplas Obj01Itsuki = new Quintuplas("Itsuki", "26 anos");
- 
-            Obj01Itsuki.Nome = "Itsuki Nakano";
-            Obj01Itsuki.Idade = 26;
-            Obj01Itsuki.Fav = "Ler";
-
-            txtNome.Text = " Nome : " + Obj01Itsuki.Nome;
-            txtIdade.Text = " Idade : " + Obj01Itsuki.Idade;
-            txtFav.Text = " Coisa Favorita : " + Obj01Itsuki.Fav;
-
-            this.txtNome.Location = new Point(500, 50);
-            this.txtIdade.Location = new Point(500, 90);
-            this.txtFav.Location = new Point(500, 130);
-            txtNome.Size = new Size(300, 30);
-            txtIdade.Size = new Size(300, 30);
-            txtFav.Size = new Size(300, 30);
-
-            string imgPath = Path.Combine(Application.StartupPath, @"..\..\IMG\itsukibrr.jpg");
-            if (File.Exists(imgPath))
-            {
-                img.Image = Image.FromFile(imgPath);
-            }
-            else
-            {
-                img.Image = null;
-                MessageBox.Show($"Arquivo de imagem não encontrado:\n{imgPath}", "Arquivo não encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-            img.SizeMode = PictureBoxSizeMode.StretchImage;
-            img.Width = 200;
-            img.Height = 300;
-            this.img.Location = new Point(480, 180);
+            MostrarPersonagem(new Itsuki());
         }
-        private void Ichika(object sender, EventArgs e)
-        {
-            Quintuplas Obj01Ichika = new Quintuplas("Ichika", "26 anos");
 
-            Obj01Ichika.Nome = "Ichika Nakano";
-            Obj01Ichika.Idade = 26;
-            Obj01Ichika.Fav = "Atuar";
-
-            txtNome.Text = " Nome : " + Obj01Ichika.Nome;
-            txtIdade.Text = " Idade : " + Obj01Ichika.Idade;
-            txtFav.Text = " Coisa Favorita : " + Obj01Ichika.Fav;
-
-            this.txtNome.Location = new Point(500, 50);
-            this.txtIdade.Location = new Point(500, 90);
-            this.txtFav.Location = new Point(500, 130);
-            txtNome.Size = new Size(300, 30);
-            txtIdade.Size = new Size(300, 30);
-            txtFav.Size = new Size(300, 30);
-
-            string imgPath = Path.Combine(Application.StartupPath, @"..\..\IMG\ichikabrr.jpg");
-            if (File.Exists(imgPath))
-            {
-                img.Image = Image.FromFile(imgPath);
-            }
-            else
-            {
-                img.Image = null;
-                MessageBox.Show($"Arquivo de imagem não encontrado:\n{imgPath}", "Arquivo não encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-            img.SizeMode = PictureBoxSizeMode.StretchImage;
-            img.Width = 200;
-            img.Height = 300;
-            this.img.Location = new Point(480, 180);
-        }
     }
 }
