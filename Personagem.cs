@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace POO
 {
-    internal class Personagem
+    internal class Jogador
     {
         public string Nome { get; protected set; }
-        public string Fav { get; protected set; }
+        public string Time { get; protected set; }
         public virtual int Idade { get; protected set; } = 0;
 
         public virtual string Imagem()
@@ -21,12 +21,12 @@ namespace POO
 
     }
 
-    class Nino : Personagem
+    class Nino : Jogador
     {
         public Nino()
         {
             Nome = "Nino Nakano";
-            Fav = "Cozinhar";
+            Time = "Cozinhar";
             Idade = 26;
         }
 
@@ -36,12 +36,12 @@ namespace POO
         }
     }
 
-    class Miku : Personagem
+    class Miku : Jogador
     {
         public Miku()
         {
             Nome = "Miku Nakano";
-            Fav = "Ouvir Música";
+            Time = "Ouvir Música";
             Idade = 26;
         }
 
@@ -51,12 +51,12 @@ namespace POO
         }
     }
 
-    class Yotsuba : Personagem
+    class Yotsuba : Jogador
     {
         public Yotsuba()
         {
             Nome = "Yotsuba Nakano";
-            Fav = "Praticar Esportes";
+            Time = "Praticar Esportes";
             Idade = 26;
         }
 
@@ -66,12 +66,12 @@ namespace POO
         }
     }
 
-    class Itsuki : Personagem
+    class Itsuki : Jogador
     {
         public Itsuki()
         {
             Nome = "Itsuki Nakano";
-            Fav = "Ler";
+            Time = "Ler";
             Idade = 26;
         }
 
@@ -81,12 +81,12 @@ namespace POO
         }
     }
 
-    class Ichika : Personagem
+    class Ichika : Jogador
     {
         public Ichika()
         {
             Nome = "Ichika Nakano";
-            Fav = "Atuar";
+            Time = "Atuar";
             Idade = 26;
         }
 
