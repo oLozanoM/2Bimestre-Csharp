@@ -40,7 +40,7 @@ namespace POO
             painel.Dock = DockStyle.Left;
             painel.Width = 300;
 
-            Titulo.Text = "Escolha a personagem de sua preferência";
+            Titulo.Text = "Escolha o jogador";
             Titulo.Size = new Size(250, 45);
             Titulo.Font = new Font("Arial", 14);
             Titulo.Location = new Point(50, 50);
