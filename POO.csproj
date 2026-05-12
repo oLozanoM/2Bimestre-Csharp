@@ -64,11 +64,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="IMG\ichikabrr.jpg" />
-    <Content Include="IMG\itsukibrr.jpg" />
-    <Content Include="IMG\mikubrr.jpg" />
-    <Content Include="IMG\ninobrr.jpg" />
-    <Content Include="IMG\yotsubabrr.jpg" />
     <None Include="Resources\yotsubabrr.jpg" />
     <None Include="Resources\ninobrr.jpg" />
     <None Include="Resources\mikubrr.jpg" />
@@ -81,6 +76,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="IMG\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
