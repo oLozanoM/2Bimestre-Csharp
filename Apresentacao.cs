@@ -45,25 +45,25 @@ namespace POO
             Titulo.Font = new Font("Arial", 14);
             Titulo.Location = new Point(50, 50);
 
-            btobj01.Text = " Ichika ";
+            btobj01.Text = " Bruno ";
             btobj01.AutoSize = true;
-            btobj01.Click += Ichika;
+            btobj01.Click += Bruno;
 
-            btobj02.Text = " Nino ";
+            btobj02.Text = " Yuri ";
             btobj02.AutoSize = true;
-            btobj02.Click += Nino;
+            btobj02.Click += Yuri;
 
-            btobj03.Text = " Miku ";
+            btobj03.Text = " Veiga ";
             btobj03.AutoSize = true;
-            btobj03.Click += Miku;
+            btobj03.Click += Veiga;
 
-            btobj04.Text = " Yotsuba ";
+            btobj04.Text = " Moura ";
             btobj04.AutoSize = true;
-            btobj04.Click += Yotsuba;
+            btobj04.Click += Moura;
 
-            btobj05.Text = " Itsuki ";
+            btobj05.Text = " Neymar ";
             btobj05.AutoSize = true;
-            btobj05.Click += Itsuki;
+            btobj05.Click += Neymar;
 
             Titulo.Location = new Point(20, 20);
             btobj01.Location = new Point(20, 80);
@@ -90,11 +90,11 @@ namespace POO
 
         }
 
-        private void MostrarPersonagem(Personagem p)
+        private void MostrarPersonagem(Jogador p)
         {
             txtNome.Text = "Nome: " + p.Nome;
             txtIdade.Text = "Idade: " + p.Idade;
-            txtFav.Text = "Favorito: " + p.Fav;
+            txtFav.Text = "Time: " + p.Time;
 
             txtNome.Location = new Point(500, 50);
             txtIdade.Location = new Point(500, 90);
@@ -122,29 +122,29 @@ namespace POO
             img.Location = new Point(480, 180);
         }
 
-        private void Ichika (object sender, EventArgs e)
+        private void Bruno (object sender, EventArgs e)
         {
-            MostrarPersonagem(new Ichika());
+            MostrarPersonagem(new Bruno());
         }
 
-        private void Nino (object sender, EventArgs e)
+        private void Yuri (object sender, EventArgs e)
         {
-            MostrarPersonagem(new Nino());
+            MostrarPersonagem(new Yuri());
         }
 
-        private void Miku (object sender, EventArgs e)
+        private void Veiga (object sender, EventArgs e)
         {
-            MostrarPersonagem(new Miku());
+            MostrarPersonagem(new Veiga());
         }
 
-        private void Yotsuba (object sender, EventArgs e)
+        private void Moura (object sender, EventArgs e)
         {
-            MostrarPersonagem(new Yotsuba());
+            MostrarPersonagem(new Moura());
         }
 
-        private void Itsuki(object sender, EventArgs e)
+        private void Neymar (object sender, EventArgs e)
         {
-            MostrarPersonagem(new Itsuki());
+            MostrarPersonagem(new Neymar());
         }
 
     }

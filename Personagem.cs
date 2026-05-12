@@ -21,78 +21,78 @@ namespace POO
 
     }
 
-    class Nino : Jogador
+    class Bruno : Jogador
     {
-        public Nino()
+        public Bruno()
         {
-            Nome = "Nino Nakano";
-            Time = "Cozinhar";
-            Idade = 26;
+            Nome = "Bruno Henrique";
+            Time = "Flamengo";
+            Idade = 35;
         }
 
         public override string Imagem()
         {
-            return @"../../IMG/ninobrr.jpg";
+            return @"../../IMG/brunohenrique.jpg";
         }
     }
 
-    class Miku : Jogador
+    class Yuri : Jogador
     {
-        public Miku()
+        public Yuri()
         {
-            Nome = "Miku Nakano";
-            Time = "Ouvir Música";
-            Idade = 26;
+            Nome = "Yuri Alberto";
+            Time = "Corinthians";
+            Idade = 25;
         }
 
         public override string Imagem()
         {
-            return @"../../IMG/mikubrr.jpg";
+            return @"../../IMG/yurialberto.jpg";
         }
     }
 
-    class Yotsuba : Jogador
+    class Veiga : Jogador
     {
-        public Yotsuba()
+        public Veiga()
         {
-            Nome = "Yotsuba Nakano";
-            Time = "Praticar Esportes";
-            Idade = 26;
+            Nome = "Raphael Veiga";
+            Time = "Palmeiras";
+            Idade = 30;
         }
 
         public override string Imagem()
         {
-            return @"../../IMG/yotsubabrr.jpg";
+            return @"../../IMG/veiga.jpg";
         }
     }
 
-    class Itsuki : Jogador
+    class Moura : Jogador
     {
-        public Itsuki()
+        public Moura()
         {
-            Nome = "Itsuki Nakano";
-            Time = "Ler";
-            Idade = 26;
+            Nome = "Lucas Moura";
+            Time = "São Paulo";
+            Idade = 33;
         }
 
         public override string Imagem()
         {
-            return @"../../IMG/itsukibrr.jpg";
+            return @"../../IMG/moura.jpg";
         }
     }
 
-    class Ichika : Jogador
+    class Neymar : Jogador
     {
-        public Ichika()
+        public Neymar()
         {
-            Nome = "Ichika Nakano";
-            Time = "Atuar";
-            Idade = 26;
+            Nome = "Neymar Jr";
+            Time = "Santos";
+            Idade = 34;
         }
 
         public override string Imagem()
         {
-            return @"../../IMG/ichikabrr.jpg";
+            return @"../../IMG/neymar.jpg";
         }
     }
 }
