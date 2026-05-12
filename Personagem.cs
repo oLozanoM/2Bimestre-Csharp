@@ -12,7 +12,7 @@ namespace POO
     {
         public string Nome { get; protected set; }
         public string Time { get; protected set; }
-        public virtual int Idade { get; protected set; } = 0;
+        public string Idade { get; protected set; } = "0";
 
         public virtual string Imagem()
         {
@@ -27,7 +27,7 @@ namespace POO
         {
             Nome = "Bruno Henrique";
             Time = "Flamengo";
-            Idade = 35;
+            Idade = "35";
         }
 
         public override string Imagem()
@@ -42,13 +42,14 @@ namespace POO
         {
             Nome = "Yuri Alberto";
             Time = "Corinthians";
-            Idade = 25;
+            Idade = "25";
         }
 
         public override string Imagem()
         {
             return @"../../IMG/yurialberto.jpg";
         }
+
     }
 
     class Veiga : Jogador
@@ -57,7 +58,7 @@ namespace POO
         {
             Nome = "Raphael Veiga";
             Time = "Palmeiras";
-            Idade = 30;
+            Idade = "30";
         }
 
         public override string Imagem()
@@ -72,7 +73,7 @@ namespace POO
         {
             Nome = "Lucas Moura";
             Time = "São Paulo";
-            Idade = 33;
+            Idade = "33";
         }
 
         public override string Imagem()
@@ -87,7 +88,7 @@ namespace POO
         {
             Nome = "Neymar Jr";
             Time = "Santos";
-            Idade = 34;
+            Idade = "34";
         }
 
         public override string Imagem()

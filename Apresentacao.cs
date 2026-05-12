@@ -33,18 +33,19 @@ namespace POO
         
         public Apresentacao()
         {
-            this.Text = "atividade 2bim ";
+            this.Text = "Jogadores brasileiros ";
             this.Size = new Size(900, 600);
 
-            painel.BackColor = Color.SkyBlue;
+            painel.BackColor = Color.DarkGreen;
             painel.Dock = DockStyle.Left;
             painel.Width = 300;
 
             Titulo.Text = "Escolha o jogador";
-            Titulo.Size = new Size(250, 45);
-            Titulo.Font = new Font("Arial", 14);
-            Titulo.Location = new Point(50, 50);
-
+            Titulo.Location = new Point(50, 90);
+            Titulo.Size = new Size(250,25);
+            Titulo.Font = new Font("Arial", 16);
+            Titulo.ForeColor = Color.White;
+            
             btobj01.Text = " Bruno ";
             btobj01.AutoSize = true;
             btobj01.Click += Bruno;
@@ -65,19 +66,48 @@ namespace POO
             btobj05.AutoSize = true;
             btobj05.Click += Neymar;
 
-            Titulo.Location = new Point(20, 20);
-            btobj01.Location = new Point(20, 80);
-            btobj02.Location = new Point(20, 130);
-            btobj03.Location = new Point(20, 180);
-            btobj04.Location = new Point(20, 230);
-            btobj05.Location = new Point(20, 280);
+            int x = 100;
 
-            Titulo.BackColor = Color.SkyBlue;
-            btobj01.BackColor = Color.Transparent;
-            btobj02.BackColor = Color.Transparent;
-            btobj03.BackColor = Color.Transparent;
-            btobj04.BackColor = Color.Transparent;
-            btobj05.BackColor = Color.Transparent;
+            Titulo.Location = new Point(50, 10);
+            btobj01.Location = new Point(x, 90);
+            btobj02.Location = new Point(x, 170);
+            btobj03.Location = new Point(x, 250);
+            btobj04.Location = new Point(x, 330);
+            btobj05.Location = new Point(95, 400);
+
+            btobj01.Font = new Font("Arial", 12);
+            btobj02.Font = new Font("Arial", 12);
+            btobj03.Font = new Font("Arial", 12);
+            btobj04.Font = new Font("Arial", 12);
+            btobj05.Font = new Font("Arial", 12);
+
+            
+            btobj01.FlatAppearance.BorderSize = 2;
+            
+            btobj02.FlatAppearance.BorderSize = 2;
+
+            btobj03.FlatAppearance.BorderSize = 2;
+
+            btobj04.FlatAppearance.BorderSize = 2;
+
+            btobj05.FlatAppearance.BorderSize = 2;
+
+            Titulo.BackColor = Color.DarkGreen;
+
+            btobj01.BackColor = Color.DarkGreen;
+            btobj01.ForeColor = Color.White;
+
+            btobj02.BackColor = Color.DarkGreen;
+            btobj02.ForeColor = Color.White;
+
+            btobj03.BackColor = Color.DarkGreen;
+            btobj03.ForeColor = Color.White;
+
+            btobj04.BackColor = Color.DarkGreen;
+            btobj04.ForeColor = Color.White;
+
+            btobj05.BackColor = Color.DarkGreen;
+            btobj05.ForeColor = Color.White;
 
             painel.Controls.Add(Titulo);
             painel.Controls.Add(btobj01);
@@ -96,13 +126,17 @@ namespace POO
             txtIdade.Text = "Idade: " + p.Idade;
             txtFav.Text = "Time: " + p.Time;
 
-            txtNome.Location = new Point(500, 50);
-            txtIdade.Location = new Point(500, 90);
-            txtFav.Location = new Point(500, 130);
+            txtNome.Location = new Point(475, 50);
+            txtIdade.Location = new Point(475, 90);
+            txtFav.Location = new Point(475, 130);
 
             txtNome.Size = new Size(300, 30);
             txtIdade.Size = new Size(300, 30);
             txtFav.Size = new Size(300, 30);
+
+            txtFav.Font = new Font("Arial", 12);
+            txtNome.Font = new Font("Arial", 12);
+            txtIdade.Font = new Font("Arial", 12);
 
             string imgPath = Path.Combine(Application.StartupPath, p.Imagem());
 
