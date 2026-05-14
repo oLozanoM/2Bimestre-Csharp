@@ -1,7 +1,8 @@
 # 2° Bimestre CSharp
 
 
-<img src="IMG/ichikabrr.jpg" width="100px"> <img src="IMG/mikubrr.jpg" width="100px"> <img src="IMG/itsukibrr.jpg" width="100px"> <img src="IMG/ninobrr.jpg" width="100px"> <img src="IMG/yotsubabrr.jpg" width="100px"> 
+<img src="IMG/superstar.jpg" width="100px"> <img src="IMG/campus.jpg" width="100px"> <img src="IMG/adi2000.jpg" width="100px"> <img src="IMG/forum.jpg" width="100px"> <img src="IMG/forum2000.jpg" width="100px">
+<img src="IMG/samba.jpg" width="100px">
 
 
 
