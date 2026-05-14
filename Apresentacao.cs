@@ -10,16 +10,17 @@ using System.IO;
 
 namespace POO
 {
+
     class Apresentacao : Form
     {
-        // criar um objeto do automovel
-        
 
         // Objeto
         PictureBox img = new PictureBox();
-        Label txtFav = new Label();
-        Label txtIdade = new Label();
-        Label txtNome = new Label();
+
+        Label txtDesc = new Label();
+        Label txtCor = new Label();
+        Label txtMarca = new Label();
+        Label txtModelo = new Label();
         Label Titulo = new Label();
 
         Button btobj01 = new Button();
@@ -27,117 +28,129 @@ namespace POO
         Button btobj03 = new Button();
         Button btobj04 = new Button();
         Button btobj05 = new Button();
+        Button btobj06 = new Button();
 
         //Painel
         Panel painel = new Panel();
-        
+
         public Apresentacao()
         {
-            this.Text = "Jogadores brasileiros ";
-            this.Size = new Size(900, 600);
+            this.Icon = new Icon(@"../../IMG/adidas.ico");
+            this.Text = "Tênis da Adidas";
+            this.Size = new Size(1100, 650);
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.BackColor = Color.FromArgb(240, 240, 240);
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
 
-            painel.BackColor = Color.DarkGreen;
+            // Painel lateral
+            painel.BackColor = Color.FromArgb(25, 25, 25);
             painel.Dock = DockStyle.Left;
-            painel.Width = 300;
+            painel.Width = 280;
 
-            Titulo.Text = "Escolha o jogador";
-            Titulo.Location = new Point(50, 90);
-            Titulo.Size = new Size(250,25);
-            Titulo.Font = new Font("Arial", 16);
+            // Título
+            Titulo.Text = "ADIDAS";
+            Titulo.Location = new Point(70, 40);
+            Titulo.Size = new Size(200, 40);
+            Titulo.Font = new Font("Segoe UI", 22, FontStyle.Bold);
             Titulo.ForeColor = Color.White;
-            
-            btobj01.Text = " Bruno ";
-            btobj01.AutoSize = true;
-            btobj01.Click += Bruno;
+            Titulo.BackColor = Color.FromArgb(25, 25, 25);
 
-            btobj02.Text = " Yuri ";
-            btobj02.AutoSize = true;
-            btobj02.Click += Yuri;
+            // Configuração dos botões
+            ConfigurarBotao(btobj01, "SuperStar", 110);
+            ConfigurarBotao(btobj02, "Campus", 180);
+            ConfigurarBotao(btobj03, "Samba", 250);
+            ConfigurarBotao(btobj04, "Forum", 320);
+            ConfigurarBotao(btobj05, "Forum 2000", 390);
+            ConfigurarBotao(btobj06, "Adi2000", 460);
 
-            btobj03.Text = " Veiga ";
-            btobj03.AutoSize = true;
-            btobj03.Click += Veiga;
+            // Eventos
+            btobj01.Click += SuperStar;
+            btobj02.Click += Campus;
+            btobj03.Click += Samba;
+            btobj04.Click += Forum;
+            btobj05.Click += Forum2000;
+            btobj06.Click += Adi2000;
 
-            btobj04.Text = " Moura ";
-            btobj04.AutoSize = true;
-            btobj04.Click += Moura;
-
-            btobj05.Text = " Neymar ";
-            btobj05.AutoSize = true;
-            btobj05.Click += Neymar;
-
-            int x = 100;
-
-            Titulo.Location = new Point(50, 10);
-            btobj01.Location = new Point(x, 90);
-            btobj02.Location = new Point(x, 170);
-            btobj03.Location = new Point(x, 250);
-            btobj04.Location = new Point(x, 330);
-            btobj05.Location = new Point(95, 400);
-
-            btobj01.Font = new Font("Arial", 12);
-            btobj02.Font = new Font("Arial", 12);
-            btobj03.Font = new Font("Arial", 12);
-            btobj04.Font = new Font("Arial", 12);
-            btobj05.Font = new Font("Arial", 12);
-
-            
-            btobj01.FlatAppearance.BorderSize = 2;
-            
-            btobj02.FlatAppearance.BorderSize = 2;
-
-            btobj03.FlatAppearance.BorderSize = 2;
-
-            btobj04.FlatAppearance.BorderSize = 2;
-
-            btobj05.FlatAppearance.BorderSize = 2;
-
-            Titulo.BackColor = Color.DarkGreen;
-
-            btobj01.BackColor = Color.DarkGreen;
-            btobj01.ForeColor = Color.White;
-
-            btobj02.BackColor = Color.DarkGreen;
-            btobj02.ForeColor = Color.White;
-
-            btobj03.BackColor = Color.DarkGreen;
-            btobj03.ForeColor = Color.White;
-
-            btobj04.BackColor = Color.DarkGreen;
-            btobj04.ForeColor = Color.White;
-
-            btobj05.BackColor = Color.DarkGreen;
-            btobj05.ForeColor = Color.White;
-
+            // Adicionando no painel
             painel.Controls.Add(Titulo);
+
             painel.Controls.Add(btobj01);
             painel.Controls.Add(btobj02);
             painel.Controls.Add(btobj03);
             painel.Controls.Add(btobj04);
             painel.Controls.Add(btobj05);
+            painel.Controls.Add(btobj06);
 
-            this.Controls.AddRange(new Control[] {painel, img, txtFav, txtIdade, txtNome});
+            // Configuração da imagem
+            img.SizeMode = PictureBoxSizeMode.Zoom;
+            img.Size = new Size(320, 320);
+            img.Location = new Point(340, 90); // imagem agora na esquerda
+            img.BackColor = Color.White;
+            img.BorderStyle = BorderStyle.FixedSingle;
+
+            // Labels principais
+            txtModelo.Location = new Point(720, 80);
+            txtModelo.Size = new Size(400, 40);
+            txtModelo.Font = new Font("Segoe UI", 20, FontStyle.Bold);
+            txtModelo.ForeColor = Color.Black;
+
+            txtMarca.Location = new Point(720, 130);
+            txtMarca.Size = new Size(300, 30);
+            txtMarca.Font = new Font("Segoe UI", 13, FontStyle.Regular);
+            txtMarca.ForeColor = Color.DimGray;
+
+            txtCor.Location = new Point(720, 170);
+            txtCor.Size = new Size(320, 60);
+            txtCor.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+            txtCor.ForeColor = Color.DimGray;
+
+            // Descrição
+            txtDesc.Location = new Point(720, 230);
+            txtDesc.Size = new Size(300, 180);
+            txtDesc.Font = new Font("Segoe UI", 11, FontStyle.Regular);
+            txtDesc.ForeColor = Color.Black;
+            txtDesc.BackColor = Color.White;
+            txtDesc.BorderStyle = BorderStyle.FixedSingle;
+
+            this.Controls.AddRange(new Control[]
+            {
+                painel,
+                img,
+                txtCor,
+                txtMarca,
+                txtModelo,
+                txtDesc
+            });
 
         }
 
-        private void MostrarPersonagem(Jogador p)
+        // Método para estilizar botão
+        private void ConfigurarBotao(Button bt, string texto, int y)
         {
-            txtNome.Text = "Nome: " + p.Nome;
-            txtIdade.Text = "Idade: " + p.Idade;
-            txtFav.Text = "Time: " + p.Time;
+            bt.Text = texto;
 
-            txtNome.Location = new Point(475, 50);
-            txtIdade.Location = new Point(475, 90);
-            txtFav.Location = new Point(475, 130);
+            bt.Location = new Point(40, y);
 
-            txtNome.Size = new Size(300, 30);
-            txtIdade.Size = new Size(300, 30);
-            txtFav.Size = new Size(300, 30);
+            bt.Size = new Size(190, 45);
 
-            txtFav.Font = new Font("Arial", 12);
-            txtNome.Font = new Font("Arial", 12);
-            txtIdade.Font = new Font("Arial", 12);
+            bt.Font = new Font("Segoe UI", 12, FontStyle.Bold);
 
+            bt.BackColor = Color.FromArgb(35, 35, 35);
+
+            bt.ForeColor = Color.White;
+
+            bt.FlatStyle = FlatStyle.Flat;
+
+            bt.FlatAppearance.BorderSize = 2;
+
+            bt.FlatAppearance.BorderColor = Color.White;
+
+            bt.Cursor = Cursors.Hand;
+        }
+
+        private void MostrarTenis(Tenis p)
+        {
             string imgPath = Path.Combine(Application.StartupPath, p.Imagem());
 
             if (File.Exists(imgPath))
@@ -150,35 +163,43 @@ namespace POO
                 MessageBox.Show("Imagem não encontrada!");
             }
 
-            img.SizeMode = PictureBoxSizeMode.StretchImage;
-            img.Width = 200;
-            img.Height = 300;
-            img.Location = new Point(480, 180);
+            txtModelo.Text = p.Nome;
+
+            txtMarca.Text = "Marca: " + p.Marca;
+
+            txtCor.Text = "Cor: " + p.Cor;
+
+            txtDesc.Text = p.Desc;
         }
 
-        private void Bruno (object sender, EventArgs e)
+        private void SuperStar(object sender, EventArgs e)
         {
-            MostrarPersonagem(new Bruno());
+            MostrarTenis(new Star());
         }
 
-        private void Yuri (object sender, EventArgs e)
+        private void Campus(object sender, EventArgs e)
         {
-            MostrarPersonagem(new Yuri());
+            MostrarTenis(new Campus());
         }
 
-        private void Veiga (object sender, EventArgs e)
+        private void Samba(object sender, EventArgs e)
         {
-            MostrarPersonagem(new Veiga());
+            MostrarTenis(new Samba());
         }
 
-        private void Moura (object sender, EventArgs e)
+        private void Forum(object sender, EventArgs e)
         {
-            MostrarPersonagem(new Moura());
+            MostrarTenis(new Forum());
         }
 
-        private void Neymar (object sender, EventArgs e)
+        private void Forum2000(object sender, EventArgs e)
         {
-            MostrarPersonagem(new Neymar());
+            MostrarTenis(new Forum2000());
+        }
+
+        private void Adi2000(object sender, EventArgs e)
+        {
+            MostrarTenis(new Adi2000());
         }
 
     }
