@@ -13,8 +13,6 @@ namespace POO
 
     class Apresentacao : Form
     {
-
-        // Objeto
         PictureBox img = new PictureBox();
 
         Label txtDesc = new Label();
@@ -30,7 +28,6 @@ namespace POO
         Button btobj05 = new Button();
         Button btobj06 = new Button();
 
-        //Painel
         Panel painel = new Panel();
 
         public Apresentacao()
@@ -43,7 +40,7 @@ namespace POO
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
 
-            // Painel lateral
+            // Painel 
             painel.BackColor = Color.FromArgb(25, 25, 25);
             painel.Dock = DockStyle.Left;
             painel.Width = 280;
@@ -56,7 +53,7 @@ namespace POO
             Titulo.ForeColor = Color.White;
             Titulo.BackColor = Color.FromArgb(25, 25, 25);
 
-            // Configuração dos botões
+            // metodo pra formatar os botoes
             ConfigurarBotao(btobj01, "SuperStar", 110);
             ConfigurarBotao(btobj02, "Campus", 180);
             ConfigurarBotao(btobj03, "Samba", 250);
@@ -64,7 +61,7 @@ namespace POO
             ConfigurarBotao(btobj05, "Forum 2000", 390);
             ConfigurarBotao(btobj06, "Adi2000", 460);
 
-            // Eventos
+            // eventos
             btobj01.Click += SuperStar;
             btobj02.Click += Campus;
             btobj03.Click += Samba;
@@ -72,7 +69,7 @@ namespace POO
             btobj05.Click += Forum2000;
             btobj06.Click += Adi2000;
 
-            // Adicionando no painel
+            // adicionando elementos no painel
             painel.Controls.Add(Titulo);
 
             painel.Controls.Add(btobj01);
@@ -82,14 +79,14 @@ namespace POO
             painel.Controls.Add(btobj05);
             painel.Controls.Add(btobj06);
 
-            // Configuração da imagem
+            // config da imagem - posição, size, bordas e cores -
             img.SizeMode = PictureBoxSizeMode.Zoom;
             img.Size = new Size(320, 320);
-            img.Location = new Point(340, 90); // imagem agora na esquerda
+            img.Location = new Point(340, 90);
             img.BackColor = Color.White;
             img.BorderStyle = BorderStyle.FixedSingle;
 
-            // Labels principais
+            // label
             txtModelo.Location = new Point(720, 80);
             txtModelo.Size = new Size(400, 40);
             txtModelo.Font = new Font("Segoe UI", 20, FontStyle.Bold);
@@ -105,7 +102,7 @@ namespace POO
             txtCor.Font = new Font("Segoe UI", 12, FontStyle.Regular);
             txtCor.ForeColor = Color.DimGray;
 
-            // Descrição
+            // descrição
             txtDesc.Location = new Point(720, 230);
             txtDesc.Size = new Size(300, 180);
             txtDesc.Font = new Font("Segoe UI", 11, FontStyle.Regular);
@@ -125,7 +122,6 @@ namespace POO
 
         }
 
-        // Método para estilizar botão
         private void ConfigurarBotao(Button bt, string texto, int y)
         {
             bt.Text = texto;
