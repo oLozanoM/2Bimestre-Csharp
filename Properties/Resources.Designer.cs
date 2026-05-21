@@ -19,7 +19,7 @@ namespace POO.Properties {
     // através de uma ferramenta como ResGen ou Visual Studio.
     // Para adicionar ou remover um associado, edite o arquivo .ResX e execute ResGen novamente
     // com a opção /str, ou recrie o projeto do VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -61,52 +61,47 @@ namespace POO.Properties {
         }
         
         /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        ///   Consulta uma cadeia de caracteres localizada semelhante a ichikabrr.jpg.
         /// </summary>
-        internal static System.Drawing.Bitmap ichikabrr {
+        internal static string ichikabrr {
             get {
-                object obj = ResourceManager.GetObject("ichikabrr", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("ichikabrr", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        ///   Consulta uma cadeia de caracteres localizada semelhante a itsukibrr.jpg.
         /// </summary>
-        internal static System.Drawing.Bitmap itsukibrr {
+        internal static string itsukibrr {
             get {
-                object obj = ResourceManager.GetObject("itsukibrr", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("itsukibrr", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        ///   Consulta uma cadeia de caracteres localizada semelhante a mikubrr.jpg.
         /// </summary>
-        internal static System.Drawing.Bitmap mikubrr {
+        internal static string mikubrr {
             get {
-                object obj = ResourceManager.GetObject("mikubrr", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("mikubrr", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        ///   Consulta uma cadeia de caracteres localizada semelhante a ninobrr.jpg.
         /// </summary>
-        internal static System.Drawing.Bitmap ninobrr {
+        internal static string ninobrr {
             get {
-                object obj = ResourceManager.GetObject("ninobrr", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("ninobrr", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        ///   Consulta uma cadeia de caracteres localizada semelhante a yotsubabrr.jpg.
         /// </summary>
-        internal static System.Drawing.Bitmap yotsubabrr {
+        internal static string yotsubabrr {
             get {
-                object obj = ResourceManager.GetObject("yotsubabrr", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("yotsubabrr", resourceCulture);
             }
         }
     }

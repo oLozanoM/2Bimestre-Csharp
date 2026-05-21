@@ -64,17 +64,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\yotsubabrr.jpg" />
-    <None Include="Resources\ninobrr.jpg" />
-    <None Include="Resources\mikubrr.jpg" />
-    <None Include="Resources\itsukibrr.jpg" />
-    <None Include="Resources\ichikabrr.jpg" />
-    <None Include="Resources\ichika.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
