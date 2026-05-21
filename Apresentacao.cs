@@ -11,14 +11,14 @@ using System.IO;
 namespace POO
 {
 
-    class Apresentacao : Form
+    class  Apresentacao : Form
     {
         PictureBox img = new PictureBox();
 
         Label txtDesc = new Label();
-        Label txtCor = new Label();
-        Label txtMarca = new Label();
-        Label txtModelo = new Label();
+        Label txtLançamento = new Label();
+        Label txtEditora = new Label();
+        Label txtNome = new Label();
         Label Titulo = new Label();
 
         Button btobj01 = new Button();
@@ -32,8 +32,8 @@ namespace POO
 
         public Apresentacao()
         {
-            this.Icon = new Icon(@"../../IMG/adidas.ico");
-            this.Text = "Tênis da Adidas";
+            this.Icon = new Icon(@"../../IMG/logo_comix_120.ico");
+            this.Text = "Loja de Mangás";
             this.Size = new Size(1100, 650);
             this.StartPosition = FormStartPosition.CenterScreen;
             this.BackColor = Color.FromArgb(240, 240, 240);
@@ -46,7 +46,7 @@ namespace POO
             painel.Width = 280;
 
             // Título
-            Titulo.Text = "ADIDAS";
+            Titulo.Text = "Mangás";
             Titulo.Location = new Point(70, 40);
             Titulo.Size = new Size(200, 40);
             Titulo.Font = new Font("Segoe UI", 22, FontStyle.Bold);
@@ -54,20 +54,20 @@ namespace POO
             Titulo.BackColor = Color.FromArgb(25, 25, 25);
 
             // metodo pra formatar os botoes
-            ConfigurarBotao(btobj01, "SuperStar", 110);
-            ConfigurarBotao(btobj02, "Campus", 180);
-            ConfigurarBotao(btobj03, "Samba", 250);
-            ConfigurarBotao(btobj04, "Forum", 320);
-            ConfigurarBotao(btobj05, "Forum 2000", 390);
-            ConfigurarBotao(btobj06, "Adi2000", 460);
+            ConfigurarBotao(btobj01, "Dragon Ball Super", 110);
+            ConfigurarBotao(btobj02, "Sword Art Online", 180);
+            ConfigurarBotao(btobj03, "Sōsō no Frieren", 250);
+            ConfigurarBotao(btobj04, "Chainsawman", 320);
+            ConfigurarBotao(btobj05, "RE:Zero", 390);
+            ConfigurarBotao(btobj06, "Bleach", 460);
 
             // eventos
-            btobj01.Click += SuperStar;
-            btobj02.Click += Campus;
-            btobj03.Click += Samba;
-            btobj04.Click += Forum;
-            btobj05.Click += Forum2000;
-            btobj06.Click += Adi2000;
+            btobj01.Click += DBS;
+            btobj02.Click += SAO;
+            btobj03.Click += Frieren;
+            btobj04.Click += CSM;
+            btobj05.Click += REzero ;
+            btobj06.Click += Bleach;
 
             // adicionando elementos no painel
             painel.Controls.Add(Titulo);
@@ -87,20 +87,20 @@ namespace POO
             img.BorderStyle = BorderStyle.FixedSingle;
 
             // label
-            txtModelo.Location = new Point(720, 80);
-            txtModelo.Size = new Size(400, 40);
-            txtModelo.Font = new Font("Segoe UI", 20, FontStyle.Bold);
-            txtModelo.ForeColor = Color.Black;
+            txtNome.Location = new Point(720, 80);
+            txtNome.Size = new Size(400, 40);
+            txtNome.Font = new Font("Segoe UI", 20, FontStyle.Bold);
+            txtNome.ForeColor = Color.Black;
 
-            txtMarca.Location = new Point(720, 130);
-            txtMarca.Size = new Size(300, 30);
-            txtMarca.Font = new Font("Segoe UI", 13, FontStyle.Regular);
-            txtMarca.ForeColor = Color.DimGray;
+            txtEditora.Location = new Point(720, 130);
+            txtEditora.Size = new Size(300, 30);
+            txtEditora.Font = new Font("Segoe UI", 13, FontStyle.Regular);
+            txtEditora.ForeColor = Color.DimGray;
 
-            txtCor.Location = new Point(720, 170);
-            txtCor.Size = new Size(320, 60);
-            txtCor.Font = new Font("Segoe UI", 12, FontStyle.Regular);
-            txtCor.ForeColor = Color.DimGray;
+            txtLançamento.Location = new Point(720, 170);
+            txtLançamento.Size = new Size(320, 60);
+            txtLançamento.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+            txtLançamento.ForeColor = Color.DimGray;
 
             // descrição
             txtDesc.Location = new Point(720, 230);
@@ -114,9 +114,9 @@ namespace POO
             {
                 painel,
                 img,
-                txtCor,
-                txtMarca,
-                txtModelo,
+                txtLançamento,
+                txtEditora,
+                txtNome,
                 txtDesc
             });
 
@@ -145,7 +145,7 @@ namespace POO
             bt.Cursor = Cursors.Hand;
         }
 
-        private void MostrarTenis(Tenis p)
+        private void MostrarMangas(Mangas p)
         {
             string imgPath = Path.Combine(Application.StartupPath, p.Imagem());
 
@@ -159,43 +159,43 @@ namespace POO
                 MessageBox.Show("Imagem não encontrada!");
             }
 
-            txtModelo.Text = p.Nome;
+            txtNome.Text = p.Nome;
 
-            txtMarca.Text = "Marca: " + p.Marca;
+            txtEditora.Text = "Editora: " + p.Editora;
 
-            txtCor.Text = "Cor: " + p.Cor;
+            txtLançamento.Text = "Lançamento: " + p.Lançamento;
 
             txtDesc.Text = p.Desc;
         }
 
-        private void SuperStar(object sender, EventArgs e)
+        private void DBS(object sender, EventArgs e)
         {
-            MostrarTenis(new Star());
+            MostrarMangas(new DBS());
         }
 
-        private void Campus(object sender, EventArgs e)
+        private void SAO(object sender, EventArgs e)
         {
-            MostrarTenis(new Campus());
+            MostrarMangas(new SAO());
         }
 
-        private void Samba(object sender, EventArgs e)
+        private void Frieren(object sender, EventArgs e)
         {
-            MostrarTenis(new Samba());
+            MostrarMangas(new Frieren());
         }
 
-        private void Forum(object sender, EventArgs e)
+        private void CSM(object sender, EventArgs e)
         {
-            MostrarTenis(new Forum());
+            MostrarMangas(new CSM());
         }
 
-        private void Forum2000(object sender, EventArgs e)
+        private void REzero(object sender, EventArgs e)
         {
-            MostrarTenis(new Forum2000());
+            MostrarMangas(new REzero());
         }
 
-        private void Adi2000(object sender, EventArgs e)
+        private void Bleach(object sender, EventArgs e)
         {
-            MostrarTenis(new Adi2000());
+            MostrarMangas(new Bleach());
         }
 
     }
