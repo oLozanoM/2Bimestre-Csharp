@@ -1,8 +1,8 @@
-# 2° Bimestre CSharp
+# Loja de Mangás C#
 
 
-<img src="IMG/superstar.jpg" width="100px"> <img src="IMG/campus.jpg" width="100px"> <img src="IMG/adi2000.jpg" width="100px"> <img src="IMG/forum.jpg" width="100px"> <img src="IMG/forum2000.jpg" width="100px">
-<img src="IMG/samba.jpg" width="100px">
+<img src="IMG/Bleach.png" width="100px"> <img src="IMG/CSM.png" width="100px"> <img src="IMG/Dbs.jpg" width="100px"> <img src="IMG/Rez.jpg" width="100px"> <img src="IMG/SwordArtOnlineVol.1.jpg" width="100px">
+<img src="IMG/frieren.jpg" width="100px">
 
 
 
